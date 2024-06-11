@@ -1,0 +1,28 @@
+pipeline{
+    agent {
+        label 'nonveg'
+    }
+    stages{
+        stage('Server Details'){
+            steps{
+                sh '''
+                    uname -a
+                '''
+            }
+        }
+        stage('Memory'){
+            steps{
+                sh '''
+                    free -h
+                '''
+            }
+        }
+        stage('Disk Utilzation'){
+            steps{
+                sh '''
+                    df -kh
+                '''
+            }
+        }
+    }
+}

@@ -1,1 +1,1 @@
-# MineMatser Home
+# MineMatser Home - Developers
